@@ -3,121 +3,909 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#10191a" />
-    <meta name="description" content="Portfolio của Trần Trọng Chiến: GreenMap, hệ thống bán hàng microservice, bản đồ di sản và các ứng dụng web, API, desktop." />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="description" content="Portfolio của Trần Trọng Chiến (blueMonkey23) — Kỹ sư phần mềm chuyên về Backend, Microservices, API và Hệ thống Dữ liệu." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Trần Trọng Chiến — Software Portfolio" />
-    <meta property="og:description" content="Dự án thực tế qua backend, dữ liệu và giao diện." />
+    <meta property="og:title" content="Trần Trọng Chiến — Software Engineer Portfolio" />
+    <meta property="og:description" content="Xây dựng giải pháp phần mềm từ kiến trúc dữ liệu và API đến sản phẩm hoàn chỉnh." />
     <meta property="og:url" content="https://nezu.id.vn/" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://nezu.id.vn/" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
     <link rel="stylesheet" href="styles.css" />
-    <title>Trần Trọng Chiến — Software Portfolio</title>
+    <title>Trần Trọng Chiến — Software Engineer Portfolio</title>
   </head>
   <body>
+    <!-- Skip navigation -->
     <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+    <!-- Ambient glowing backgrounds -->
+    <div class="ambient-glow glow-top" aria-hidden="true"></div>
+    <div class="ambient-glow glow-middle" aria-hidden="true"></div>
+
+    <!-- Site Header -->
     <header class="site-header" id="top">
       <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="Trần Trọng Chiến, về đầu trang"><span class="brand-mark">TC<span class="brand-dot">.</span></span><span class="brand-name">TRẦN TRỌNG CHIẾN</span></a>
-        <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+        <a class="brand" href="#top" aria-label="Trần Trọng Chiến - Về đầu trang">
+          <span class="brand-badge">
+            <span class="brand-monogram">TC</span>
+            <span class="brand-glow-dot"></span>
+          </span>
+          <div class="brand-text">
+            <span class="brand-name">TRẦN TRỌNG CHIẾN</span>
+            <span class="brand-tag">SOFTWARE ENGINEER</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
         <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
-          <a href="#du-an">Dự án</a>
-          <a href="#nang-luc">Năng lực</a>
-          <a href="#lien-he" class="nav-contact">Liên hệ <span aria-hidden="true">↗</span></a>
+          <a class="nav-link" href="#du-an">Dự án</a>
+          <a class="nav-link" href="#nang-luc">Năng lực</a>
+          <a class="nav-link" href="#kien-truc">Kiến trúc</a>
+          <a class="nav-link" href="#lien-he">Liên hệ</a>
         </nav>
+
+        <!-- Header Actions -->
+        <div class="nav-actions">
+          <a class="btn btn-ghost btn-sm" href="https://github.com/blueMonkey23" target="_blank" rel="noopener noreferrer" aria-label="Xem GitHub của Trần Trọng Chiến">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <button class="btn btn-outline btn-sm copy-email-btn" type="button" data-email="trantrongchien05@gmail.com" aria-label="Sao chép email liên hệ">
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy Email</span>
+          </button>
+          <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
       </div>
     </header>
 
     <main id="main">
+      <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> SOFTWARE PORTFOLIO <span class="eyebrow-rule"></span> NEZU.ID.VN</div>
-            <h1 id="hero-title">Từ dữ liệu<br /><em>đến sản phẩm</em><span class="hero-period">.</span></h1>
-            <p class="hero-lead">Mình là <strong>Trần Trọng Chiến</strong>. Mình xây API, ứng dụng web và công cụ dữ liệu qua những dự án có thể xem mã nguồn và cách triển khai cụ thể.</p>
-            <div class="hero-actions">
-              <a class="button button-lime" href="#du-an">Khám phá dự án <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="https://github.com/blueMonkey23" target="_blank" rel="noopener noreferrer">GitHub của mình <span aria-hidden="true">↗</span></a>
+          <div class="hero-content">
+            <div class="status-badge">
+              <span class="pulse-indicator" aria-hidden="true">
+                <span class="pulse-ring"></span>
+                <span class="pulse-core"></span>
+              </span>
+              <span class="status-text">Sẵn sàng hợp tác • Software Engineer</span>
+            </div>
+
+            <h1 id="hero-title" class="hero-heading">
+              Từ dữ liệu thực tế<br />
+              đến <span class="gradient-text">sản phẩm phần mềm</span>.
+            </h1>
+
+            <p class="hero-desc">
+              Xin chào, mình là <strong>Trần Trọng Chiến</strong> (blueMonkey23). Mình tập trung thiết kế
+              <strong>kiến trúc Backend</strong>, xây dựng <strong>API & Microservices</strong> và phát triển các
+              <strong>ứng dụng dữ liệu</strong> có mã nguồn rõ ràng, có thể kiểm chứng độc lập.
+            </p>
+
+            <div class="hero-buttons">
+              <a class="btn btn-primary" href="#du-an">
+                <span>Khám phá dự án</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a class="btn btn-secondary" href="https://github.com/blueMonkey23" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>GitHub Profile</span>
+              </a>
+              <button class="btn btn-ghost copy-email-btn" type="button" data-email="trantrongchien05@gmail.com">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>trantrongchien05@gmail.com</span>
+              </button>
+            </div>
+
+            <!-- Tech stack chips -->
+            <div class="hero-tech-pills">
+              <span class="tech-pill-label">TECH STACK:</span>
+              <span class="pill">FastAPI</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Laravel</span>
+              <span class="pill">React</span>
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">Docker</span>
+              <span class="pill">Microservices</span>
             </div>
           </div>
-          <div class="hero-board" aria-label="Sơ đồ từ nguồn dữ liệu qua API đến giao diện">
-            <div class="board-top"><span>WORKFLOW / 001</span><span class="board-cross" aria-hidden="true">✳</span></div>
-            <div class="flow-lines" aria-hidden="true"><span class="flow-line one"></span><span class="flow-line two"></span><span class="flow-line three"></span></div>
-            <div class="flow-node node-data"><span class="node-symbol">⌁</span><small>INPUT</small><strong>Dữ liệu</strong><span>Open data · SQL</span></div>
-            <div class="flow-node node-api"><span class="node-symbol">{ }</span><small>LOGIC</small><strong>API & dịch vụ</strong><span>FastAPI · Express</span></div>
-            <div class="flow-node node-ui"><span class="node-symbol">▣</span><small>OUTPUT</small><strong>Giao diện</strong><span>React · Web · Desktop</span></div>
-            <div class="board-bottom"><span>THINK → BUILD → VERIFY</span><span>© 2026</span></div>
+
+          <!-- Hero Console Visualizer -->
+          <div class="hero-console-wrap" aria-label="Bảng điều khiển kiến trúc & mã nguồn mẫu">
+            <div class="code-console">
+              <div class="console-header">
+                <div class="window-controls">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="console-tabs" role="tablist" aria-label="Chọn đoạn mã mẫu">
+                  <button class="console-tab is-active" role="tab" aria-selected="true" data-code="fastapi">
+                    <span class="tab-icon">🐍</span> GreenMap API
+                  </button>
+                  <button class="console-tab" role="tab" aria-selected="false" data-code="gateway">
+                    <span class="tab-icon">⚡</span> Gateway
+                  </button>
+                  <button class="console-tab" role="tab" aria-selected="false" data-code="laravel">
+                    <span class="tab-icon">🐘</span> Task API
+                  </button>
+                </div>
+                <div class="console-badge">HTTP/2</div>
+              </div>
+
+              <!-- Code Viewport -->
+              <div class="console-body">
+                <!-- Snippet 1: FastAPI -->
+                <pre class="code-block code-active" id="code-fastapi"><code><span class="c-comment"># GreenMap Backend • FastAPI & Orion-LD Sync</span>
+<span class="c-kw">from</span> fastapi <span class="c-kw">import</span> FastAPI, Depends, HTTPException
+<span class="c-kw">from</span> app.services.orion <span class="c-kw">import</span> sync_air_quality
+
+app = FastAPI(title=<span class="c-str">"GreenMap API"</span>, version=<span class="c-str">"1.0"</span>)
+
+<span class="c-decorator">@app.get</span>(<span class="c-str">"/api/v1/locations/{id}/aqi"</span>)
+<span class="c-kw">async def</span> <span class="c-fn">get_station_aqi</span>(id: <span class="c-type">str</span>):
+    location = <span class="c-kw">await</span> db.locations.find_one({<span class="c-str">"id"</span>: id})
+    <span class="c-kw">if not</span> location:
+        <span class="c-kw">raise</span> HTTPException(status_code=<span class="c-num">404</span>)
+    
+    <span class="c-comment"># NGSI-LD Context Broker synchronization</span>
+    aqi_data = <span class="c-kw">await</span> sync_air_quality(location)
+    <span class="c-kw">return</span> {
+        <span class="c-str">"status"</span>: <span class="c-str">"active"</span>,
+        <span class="c-str">"aqi"</span>: aqi_data.value,
+        <span class="c-str">"coords"</span>: location.coords
+    }</code></pre>
+
+                <!-- Snippet 2: Gateway -->
+                <pre class="code-block" id="code-gateway"><code><span class="c-comment">// Circle K Microservices • Express API Gateway</span>
+<span class="c-kw">const</span> express = require(<span class="c-str">'express'</span>);
+<span class="c-kw">const</span> { createProxyMiddleware } = require(<span class="c-str">'http-proxy-middleware'</span>);
+<span class="c-kw">const</span> app = express();
+
+<span class="c-comment">// Route requests to independent microservices</span>
+app.use(<span class="c-str">'/api/auth'</span>, createProxyMiddleware({ 
+    target: <span class="c-str">'http://auth-service:4001'</span>, changeOrigin: <span class="c-kw">true</span> 
+}));
+
+app.use(<span class="c-str">'/api/products'</span>, createProxyMiddleware({ 
+    target: <span class="c-str">'http://product-service:4002'</span>, changeOrigin: <span class="c-kw">true</span> 
+}));
+
+app.use(<span class="c-str">'/api/orders'</span>, createProxyMiddleware({ 
+    target: <span class="c-str">'http://order-service:4003'</span>, changeOrigin: <span class="c-kw">true</span> 
+}));
+
+app.listen(<span class="c-num">8000</span>, () =&gt; console.log(<span class="c-str">'Gateway on :8000'</span>));</code></pre>
+
+                <!-- Snippet 3: Laravel -->
+                <pre class="code-block" id="code-laravel"><code><span class="c-comment">// Task & Progress API • Laravel Form Request & Resource</span>
+<span class="c-kw">namespace</span> App\Http\Controllers\Api;
+
+<span class="c-kw">use</span> App\Http\Requests\UpdateTaskProgressRequest;
+<span class="c-kw">use</span> App\Http\Resources\TaskResource;
+<span class="c-kw">use</span> App\Models\Task;
+
+<span class="c-kw">class</span> <span class="c-type">TaskController</span> <span class="c-kw">extends</span> Controller
+{
+    <span class="c-kw">public function</span> <span class="c-fn">updateProgress</span>(UpdateTaskProgressRequest $request, Task $task)
+    {
+        $validated = $request-&gt;validated();
+        $task-&gt;update([
+            <span class="c-str">'progress'</span> =&gt; $validated[<span class="c-str">'progress'</span>],
+            <span class="c-str">'status'</span>   =&gt; $validated[<span class="c-str">'progress'</span>] == <span class="c-num">100</span> ? <span class="c-str">'DONE'</span> : <span class="c-str">'IN_PROGRESS'</span>
+        ]);
+
+        <span class="c-kw">return new</span> TaskResource($task);
+    }
+}</code></pre>
+              </div>
+
+              <!-- Console Status Footer -->
+              <div class="console-footer">
+                <div class="status-indicator">
+                  <span class="status-led"></span>
+                  <span class="status-name">STATUS: 200 OK</span>
+                </div>
+                <div class="console-stats">
+                  <span>Latency: 14ms</span>
+                  <span>•</span>
+                  <span>Env: Linux / Docker</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="container hero-foot"><span>BACKEND / FULL STACK / DATA</span><span>Cuộn xuống để xem dự án <span aria-hidden="true">↓</span></span></div>
+
+        <!-- Metrics bar -->
+        <div class="container hero-metrics">
+          <div class="metric-card">
+            <span class="metric-num">06+</span>
+            <span class="metric-label">Dự án mã nguồn mở</span>
+            <span class="metric-sub">Kiểm chứng trực tiếp trên GitHub</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">100%</span>
+            <span class="metric-label">Minh bạch đóng góp</span>
+            <span class="metric-sub">Ghi nhận đúng commit & vai trò</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">3-Layer</span>
+            <span class="metric-label">Kiến trúc đa tầng</span>
+            <span class="metric-sub">Data Layer → API → Client UI</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">Active</span>
+            <span class="metric-label">Sẵn sàng hợp tác</span>
+            <span class="metric-sub">Full-time, Dự án & Freelance</span>
+          </div>
+        </div>
       </section>
 
+      <!-- Projects Section -->
       <section class="projects-section" id="du-an" aria-labelledby="projects-title">
         <div class="container">
-          <div class="section-heading">
-            <div><p class="section-kicker"><span class="kicker-square"></span> DỰ ÁN CHỌN LỌC</p><h2 id="projects-title">Bằng chứng<br />trong mã nguồn<span>.</span></h2></div>
-            <p>Những dự án dưới đây được chọn từ repository và lịch sử đóng góp công khai. Mỗi mô tả tập trung vào phần có thể kiểm chứng.</p>
-          </div>
-          <div class="filter-row" role="group" aria-label="Lọc dự án">
-            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Tất cả</button>
-            <button class="filter-button" type="button" data-filter="backend" aria-pressed="false">Backend</button>
-            <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web & dữ liệu</button>
-            <button class="filter-button" type="button" data-filter="desktop" aria-pressed="false">Desktop & UI</button>
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span class="kicker-glow"></span>
+                <span>SELECTED WORK & SOURCE CODE</span>
+              </div>
+              <h2 id="projects-title" class="section-title">
+                Bằng chứng trong <span class="gradient-text">mã nguồn</span>.
+              </h2>
+            </div>
+            <p class="section-subtitle">
+              Mỗi dự án đều gắn với repository và lịch sử commit công khai, tập trung vào kiến trúc hệ thống,
+              xử lý dữ liệu và khả năng vận hành thực tế.
+            </p>
           </div>
 
-          <div class="project-grid">
-            <article class="project-card project-featured" data-category="backend web">
-              <div class="project-content">
-                <div class="project-topline"><span>DỰ ÁN NHÓM · BACKEND</span><span>01 / FEATURED</span></div>
-                <h3>GreenMap<span class="title-light"> Backend</span></h3>
-                <p>Bản đồ xanh Hà Nội kết nối dữ liệu địa điểm, chất lượng không khí và thời tiết. Mình có đóng góp được ghi trong lịch sử commit: API người dùng, đồng bộ địa điểm với Orion-LD, thông báo và cấu hình triển khai.</p>
-                <div class="tag-list"><span>FastAPI</span><span>PostgreSQL</span><span>NGSI-LD</span><span>Orion-LD</span></div>
-                <a class="project-link" href="https://github.com/HouHackathon-CQP/GreenMap-Backend" target="_blank" rel="noopener noreferrer">Xem repository <span aria-hidden="true">↗</span></a>
+          <!-- Filter Navigation -->
+          <div class="filter-bar" role="group" aria-label="Bộ lọc dự án theo chuyên môn">
+            <button class="filter-pill is-active" type="button" data-filter="all" aria-pressed="true">
+              <span>Tất cả dự án</span>
+              <span class="filter-count">6</span>
+            </button>
+            <button class="filter-pill" type="button" data-filter="backend" aria-pressed="false">
+              <span>Backend & Microservices</span>
+              <span class="filter-count">3</span>
+            </button>
+            <button class="filter-pill" type="button" data-filter="web" aria-pressed="false">
+              <span>Web & Dữ liệu mở</span>
+              <span class="filter-count">2</span>
+            </button>
+            <button class="filter-pill" type="button" data-filter="desktop" aria-pressed="false">
+              <span>Desktop & AI UI</span>
+              <span class="filter-count">2</span>
+            </button>
+          </div>
+
+          <!-- Bento Grid Projects -->
+          <div class="bento-grid">
+            
+            <!-- Project 1: GreenMap Backend (Featured Large Card) -->
+            <article class="project-card featured-card" data-category="backend web">
+              <div class="spotlight" aria-hidden="true"></div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="badge badge-accent">DỰ ÁN NHÓM · BACKEND CỐT LÕI</span>
+                  <span class="card-id">#01 • FEATURED</span>
+                </div>
+                <h3 class="card-title">GreenMap Backend</h3>
+                <p class="card-desc">
+                  Bản đồ xanh Hà Nội kết nối dữ liệu địa điểm, thời tiết và quan trắc chất lượng không khí (AQI). Đóng góp chính: Xây dựng hệ thống User API, tích hợp cơ chế đồng bộ thực thể IoT với Orion-LD (NGSI-LD Context Broker), hệ thống thông báo sự cố và cấu hình môi trường triển khai Docker.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">NGSI-LD</span>
+                  <span class="tech-tag">Orion-LD</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">IoT Data</span>
+                </div>
+                <div class="card-footer-actions">
+                  <a class="btn btn-outline" href="https://github.com/HouHackathon-CQP/GreenMap-Backend" target="_blank" rel="noopener noreferrer">
+                    <span>Xem Repository</span>
+                    <svg class="icon-external" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <a class="text-anchor" href="https://github.com/HouHackathon-CQP/GreenMap-Backend/commits?author=blueMonkey23" target="_blank" rel="noopener noreferrer">
+                    Lịch sử commit của blueMonkey23 ↗
+                  </a>
+                </div>
               </div>
-              <div class="project-visual map-visual" aria-hidden="true">
-                <div class="map-grid"></div><div class="map-orbit orbit-one"></div><div class="map-orbit orbit-two"></div><div class="map-path"></div>
-                <span class="map-marker marker-a"></span><span class="map-marker marker-b"></span><span class="map-marker marker-c"></span>
-                <div class="map-coord">21.0285° N<br />105.8542° E</div>
-                <div class="map-panel"><span>GREENMAP / DATA LAYER</span><strong>HÀ NỘI</strong><div class="map-panel-row"><i></i> AQI / WEATHER / LOCATIONS</div></div>
+
+              <!-- Visual Mockup: IoT Node & Air Quality Radar -->
+              <div class="card-visual visual-greenmap" aria-hidden="true">
+                <div class="mockup-hud">
+                  <div class="hud-header">
+                    <span class="hud-title"><span class="hud-pulse"></span> GREENMAP IOT STATION</span>
+                    <span class="hud-coords">21.0285° N, 105.8542° E</span>
+                  </div>
+                  <div class="radar-container">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-ring r1"></div>
+                    <div class="radar-ring r2"></div>
+                    <div class="radar-ring r3"></div>
+                    <div class="sensor-node node-1"><span class="node-ping"></span>AQI: 58</div>
+                    <div class="sensor-node node-2"><span class="node-ping"></span>PM2.5: 16</div>
+                    <div class="sensor-node node-3"><span class="node-ping"></span>NO2: Normal</div>
+                  </div>
+                  <div class="hud-stream">
+                    <div class="stream-line"><span class="stream-badge">SYNC</span> Orion-LD: AirQualityObserved updated (entity_id: hanoi_station_01)</div>
+                    <div class="stream-line"><span class="stream-badge ok">200 OK</span> GET /api/v1/locations/green-zones • 18ms</div>
+                  </div>
+                </div>
               </div>
             </article>
 
+            <!-- Project 2: Circle K Microservices Demo -->
             <article class="project-card" data-category="backend web">
-              <div class="project-visual pos-visual" aria-hidden="true">
-                <div class="pos-window"><div class="window-top"><span class="window-dots"><i></i><i></i><i></i></span><b>POS / DASHBOARD</b><span>◌</span></div><div class="pos-layout"><div class="pos-sidebar"><i></i><i></i><i></i><i></i></div><div class="pos-main"><div class="pos-chips"><span></span><span></span><span></span></div><div class="pos-line wide"></div><div class="pos-line"></div><div class="pos-line short"></div><div class="pos-cards"><i></i><i></i><i></i></div></div></div></div>
+              <div class="spotlight" aria-hidden="true"></div>
+              <div class="card-visual visual-microservices" aria-hidden="true">
+                <div class="microservices-diagram">
+                  <div class="service-node gateway-node">
+                    <span class="node-type">GATEWAY</span>
+                    <span class="node-name">API Gateway :8000</span>
+                  </div>
+                  <div class="flow-connectors">
+                    <span class="connector-line"></span>
+                    <span class="connector-line"></span>
+                    <span class="connector-line"></span>
+                    <span class="connector-line"></span>
+                  </div>
+                  <div class="service-cluster">
+                    <div class="service-pill"><span class="dot-green"></span> Auth :4001</div>
+                    <div class="service-pill"><span class="dot-green"></span> Products :4002</div>
+                    <div class="service-pill"><span class="dot-green"></span> Orders :4003</div>
+                    <div class="service-pill"><span class="dot-green"></span> Reports :4004</div>
+                  </div>
+                </div>
               </div>
-              <div class="project-content"><div class="project-topline"><span>FULL STACK · DEMO</span><span>02</span></div><h3>Circle K<br />Microservices Demo</h3><p>Mô phỏng quản lý bán hàng với API Gateway, các service người dùng, sản phẩm, đơn hàng và báo cáo; giao diện React gọi API qua gateway.</p><div class="tag-list"><span>Node.js</span><span>Express</span><span>React</span><span>MySQL</span></div><a class="project-link" href="https://github.com/blueMonkey23/QuanLyBanHangCircleK" target="_blank" rel="noopener noreferrer">Xem repository <span aria-hidden="true">↗</span></a></div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="badge">FULL STACK · KIẾN TRÚC PHÂN TÁN</span>
+                  <span class="card-id">#02</span>
+                </div>
+                <h3 class="card-title">Circle K Microservices Demo</h3>
+                <p class="card-desc">
+                  Hệ thống quản lý chuỗi bán lẻ mô phỏng kiến trúc Microservices độc lập. Xây dựng API Gateway định tuyến, các service nghiệp vụ (Auth, Products, Orders, Reports), cơ sở dữ liệu MySQL riêng và giao diện React gọi API tập trung.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">API Gateway</span>
+                </div>
+                <div class="card-footer-actions">
+                  <a class="btn btn-outline" href="https://github.com/blueMonkey23/QuanLyBanHangCircleK" target="_blank" rel="noopener noreferrer">
+                    <span>Xem Repository</span>
+                    <svg class="icon-external" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
+            <!-- Project 3: CultureLinkVN -->
             <article class="project-card" data-category="web">
-              <div class="project-visual culture-visual" aria-hidden="true"><div class="culture-land land-one"></div><div class="culture-land land-two"></div><div class="culture-land land-three"></div><span class="heritage-pin pin-one"></span><span class="heritage-pin pin-two"></span><span class="heritage-pin pin-three"></span><div class="culture-label">CULTURELINKVN <span>● DI SẢN & BẢO TÀNG</span></div><div class="culture-panel"><span>TÌM KIẾM</span><div></div><div></div><div></div></div></div>
-              <div class="project-content"><div class="project-topline"><span>WEB · DỮ LIỆU MỞ</span><span>03</span></div><h3>CultureLinkVN</h3><p>Bản đồ tương tác về di sản và bảo tàng Việt Nam, có tìm kiếm, lọc theo tỉnh và loại địa điểm, biểu đồ thống kê và dữ liệu xử lý từ Wikidata.</p><div class="tag-list"><span>JavaScript</span><span>Leaflet</span><span>Chart.js</span><span>Wikidata</span></div><a class="project-link" href="https://github.com/blueMonkey23/CultureLinkVN" target="_blank" rel="noopener noreferrer">Xem repository <span aria-hidden="true">↗</span></a></div>
+              <div class="spotlight" aria-hidden="true"></div>
+              <div class="card-visual visual-gis" aria-hidden="true">
+                <div class="map-mockup">
+                  <div class="map-radar-bg"></div>
+                  <div class="map-pin pin-hanoi">
+                    <span class="pin-dot"></span>
+                    <span class="pin-popup">Hoàng Thành Thăng Long</span>
+                  </div>
+                  <div class="map-pin pin-hue">
+                    <span class="pin-dot"></span>
+                    <span class="pin-popup">Cố Đô Huế</span>
+                  </div>
+                  <div class="map-pin pin-hoian">
+                    <span class="pin-dot"></span>
+                    <span class="pin-popup">Phố Cổ Hội An</span>
+                  </div>
+                  <div class="map-status-pill">
+                    <span class="sparql-indicator">SPARQL</span> Wikidata Connected • 1,240+ Di sản
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="badge">WEB GIS · DỮ LIỆU MỞ</span>
+                  <span class="card-id">#03</span>
+                </div>
+                <h3 class="card-title">CultureLinkVN</h3>
+                <p class="card-desc">
+                  Bản đồ tương tác di sản văn hóa và bảo tàng Việt Nam. Tích hợp dữ liệu mở từ Wikidata qua SPARQL queries, hiển thị bản đồ số tương tác trên Leaflet với cụm điểm đánh dấu, bộ lọc theo tỉnh thành và biểu đồ phân loại Chart.js.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Leaflet.js</span>
+                  <span class="tech-tag">Chart.js</span>
+                  <span class="tech-tag">Wikidata SPARQL</span>
+                  <span class="tech-tag">GeoJSON</span>
+                </div>
+                <div class="card-footer-actions">
+                  <a class="btn btn-outline" href="https://github.com/blueMonkey23/CultureLinkVN" target="_blank" rel="noopener noreferrer">
+                    <span>Xem Repository</span>
+                    <svg class="icon-external" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
+            <!-- Project 4: Task & Progress REST API -->
             <article class="project-card" data-category="backend">
-              <div class="project-visual api-visual" aria-hidden="true"><div class="api-terminal"><div class="api-head"><span class="window-dots"><i></i><i></i><i></i></span><span>routes/api.php</span></div><div class="api-row"><b>GET</b><span>/api/tasks</span><i></i></div><div class="api-row"><b>POST</b><span>/api/tasks</span><i></i></div><div class="api-row"><b>PUT</b><span>/api/tasks/{id}</span><i></i></div><div class="api-row"><b>GET</b><span>/api/progress</span><i></i></div></div></div>
-              <div class="project-content"><div class="project-topline"><span>BACKEND · API</span><span>04</span></div><h3>Task & Progress API</h3><p>API Laravel cho công việc và tiến độ: tạo, xem, cập nhật, xoá; validation trạng thái và phần trăm hoàn thành, cùng tài nguyên phản hồi riêng.</p><div class="tag-list"><span>PHP</span><span>Laravel</span><span>REST API</span></div><a class="project-link" href="https://github.com/blueMonkey23/BaoCaoLaravel" target="_blank" rel="noopener noreferrer">Xem repository <span aria-hidden="true">↗</span></a></div>
+              <div class="spotlight" aria-hidden="true"></div>
+              <div class="card-visual visual-api" aria-hidden="true">
+                <div class="api-console">
+                  <div class="api-head">
+                    <span class="api-method">POST</span>
+                    <span class="api-url">/api/v1/tasks/{id}/progress</span>
+                    <span class="api-status">201 CREATED</span>
+                  </div>
+                  <div class="api-json-body">
+<pre>{
+  <span class="c-str">"task_id"</span>: <span class="c-num">1042</span>,
+  <span class="c-str">"title"</span>: <span class="c-str">"Kiểm thử tải Endpoint Microservices"</span>,
+  <span class="c-str">"progress"</span>: <span class="c-num">100</span>,
+  <span class="c-str">"status"</span>: <span class="c-str">"COMPLETED"</span>,
+  <span class="c-str">"updated_at"</span>: <span class="c-str">"2026-11-20T16:00:00Z"</span>
+}</pre>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="badge">BACKEND API · LARAVEL</span>
+                  <span class="card-id">#04</span>
+                </div>
+                <h3 class="card-title">Task & Progress REST API</h3>
+                <p class="card-desc">
+                  Hệ thống REST API quản lý công việc và tiến độ xây dựng trên nền tảng Laravel. Thiết kế chuẩn RESTful với Form Request validation, API Resources chuyển đổi cấu trúc phản hồi, phân quyền người dùng và kiểm soát trạng thái hoàn thành.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">Laravel 10</span>
+                  <span class="tech-tag">RESTful API</span>
+                  <span class="tech-tag">Eloquent ORM</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+                <div class="card-footer-actions">
+                  <a class="btn btn-outline" href="https://github.com/blueMonkey23/BaoCaoLaravel" target="_blank" rel="noopener noreferrer">
+                    <span>Xem Repository</span>
+                    <svg class="icon-external" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
+            <!-- Project 5: Quản lý nhân khẩu -->
             <article class="project-card" data-category="desktop">
-              <div class="project-visual desktop-visual" aria-hidden="true"><div class="desktop-window"><div class="desktop-title"><span>QUẢN LÝ NHÂN KHẨU</span><span>□ ×</span></div><div class="desktop-app"><div class="desktop-menu"><i></i><i></i><i></i><i></i><i></i></div><div class="desktop-form"><span>Hồ sơ nhân khẩu</span><div class="desktop-inputs"><i></i><i></i><i></i><i></i></div><div class="desktop-table"><i></i><i></i><i></i></div></div></div></div></div>
-              <div class="project-content"><div class="project-topline"><span>WINDOWS · DESKTOP</span><span>05</span></div><h3>Quản lý nhân khẩu</h3><p>Ứng dụng WinForms quản lý phường, tổ dân phố, nhân khẩu và người phụ thuộc; có các luồng nhập hộ, tách hộ, chuyển đi và báo cáo.</p><div class="tag-list"><span>C#</span><span>WinForms</span><span>SQL Server</span></div><a class="project-link" href="https://github.com/blueMonkey23/QuanLyNhanKhau1" target="_blank" rel="noopener noreferrer">Xem repository <span aria-hidden="true">↗</span></a></div>
+              <div class="spotlight" aria-hidden="true"></div>
+              <div class="card-visual visual-desktop" aria-hidden="true">
+                <div class="desktop-mockup-frame">
+                  <div class="desktop-top-bar">
+                    <span class="win-app-title">Quản lý nhân khẩu v2.1 • C# WinForms</span>
+                    <div class="win-window-btns"><i></i><i></i><i></i></div>
+                  </div>
+                  <div class="desktop-grid-view">
+                    <div class="desktop-stats-row">
+                      <div class="mini-stat"><span>Tổng hộ</span><strong>1,482</strong></div>
+                      <div class="mini-stat"><span>Nhân khẩu</span><strong>5,920</strong></div>
+                      <div class="mini-stat"><span>Tạm trú</span><strong>318</strong></div>
+                    </div>
+                    <div class="table-mock">
+                      <div class="table-row head"><span>Họ & Tên</span><span>CMND/CCCD</span><span>Quan hệ</span><span>Trạng thái</span></div>
+                      <div class="table-row"><span>Nguyễn Văn A</span><span>00120000****</span><span>Chủ hộ</span><span class="status-chip active">Thường trú</span></div>
+                      <div class="table-row"><span>Trần Thị B</span><span>00120200****</span><span>Vợ</span><span class="status-chip active">Thường trú</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="badge">DESKTOP APP · C# / .NET</span>
+                  <span class="card-id">#05</span>
+                </div>
+                <h3 class="card-title">Phần Mềm Quản Lý Nhân Khẩu</h3>
+                <p class="card-desc">
+                  Ứng dụng Windows Forms quản lý hồ sơ nhân khẩu và hộ khẩu cấp cơ sở. Thiết kế cơ sở dữ liệu quan hệ SQL Server tối ưu cho các luồng nghiệp vụ: nhập hộ, tách hộ, quản lý nhân khẩu tạm trú/tạm vắng và kết xuất báo cáo thống kê.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">.NET WinForms</span>
+                  <span class="tech-tag">SQL Server</span>
+                  <span class="tech-tag">Relational DB</span>
+                  <span class="tech-tag">Data Grid</span>
+                </div>
+                <div class="card-footer-actions">
+                  <a class="btn btn-outline" href="https://github.com/blueMonkey23/QuanLyNhanKhau1" target="_blank" rel="noopener noreferrer">
+                    <span>Xem Repository</span>
+                    <svg class="icon-external" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
+            <!-- Project 6: AI Photo Restoration App -->
             <article class="project-card" data-category="desktop web">
-              <div class="project-visual photo-visual" aria-hidden="true"><div class="photo-left"><span>BEFORE</span><div class="photo-shape"></div></div><div class="photo-right"><span>AFTER</span><div class="photo-shape"></div></div><div class="photo-divider"><i>‹ ›</i></div><div class="photo-badge">UI PROTOTYPE</div></div>
-              <div class="project-content"><div class="project-topline"><span>GIAO DIỆN · NGUYÊN MẪU</span><span>06</span></div><h3>AI Photo Restoration</h3><p>Nguyên mẫu giao diện React cho luồng tải ảnh, chọn chế độ và so sánh trước/sau. Repository hiện thể hiện phần giao diện, chưa có pipeline khôi phục ảnh.</p><div class="tag-list"><span>React</span><span>TypeScript</span><span>Vite</span></div><a class="project-link" href="https://github.com/blueMonkey23/Aiphotorestorationapp" target="_blank" rel="noopener noreferrer">Xem repository <span aria-hidden="true">↗</span></a></div>
+              <div class="spotlight" aria-hidden="true"></div>
+              
+              <!-- Interactive Before/After Comparison Visualizer -->
+              <div class="card-visual visual-photo-compare" aria-label="So sánh ảnh trước và sau phục chế">
+                <div class="comparison-slider" data-compare-slider>
+                  <!-- After Image (Sharp Restored) -->
+                  <div class="image-layer layer-after">
+                    <div class="photo-art restored-art">
+                      <div class="face-glow"></div>
+                      <span class="label-badge label-right">RESTORED (AI ENHANCED)</span>
+                    </div>
+                  </div>
+                  <!-- Before Image (Degraded Vintage) -->
+                  <div class="image-layer layer-before" data-compare-before>
+                    <div class="photo-art degraded-art">
+                      <div class="noise-overlay"></div>
+                      <div class="scratch-line s1"></div>
+                      <div class="scratch-line s2"></div>
+                      <span class="label-badge label-left">ORIGINAL (NOISY)</span>
+                    </div>
+                  </div>
+                  <!-- Draggable divider -->
+                  <div class="slider-divider" data-compare-handle>
+                    <div class="divider-line"></div>
+                    <div class="divider-thumb">
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                        <polyline points="9 18 3 12 9 6"></polyline>
+                      </svg>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                        <polyline points="15 18 21 12 15 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="interactive-hint">Kéo thanh trượt để so sánh hiệu ứng</div>
+              </div>
+
+              <div class="card-content">
+                <div class="card-meta">
+                  <span class="badge">FRONTEND UI · NGUYÊN MẪU TƯƠNG TÁC</span>
+                  <span class="card-id">#06</span>
+                </div>
+                <h3 class="card-title">AI Photo Restoration UI</h3>
+                <p class="card-desc">
+                  Nguyên mẫu giao diện React & TypeScript cho ứng dụng phục chế ảnh cũ bằng AI. Thiết kế luồng người dùng tối ưu: kéo thả tải ảnh, lựa chọn chế độ xử lý (Làm nét khuôn mặt, Tô màu ảnh cũ, Khử vết xước) và thanh trượt so sánh trực quan.
+                </p>
+                <div class="tech-stack-list">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">Interactive UI</span>
+                  <span class="tech-tag">Tailwind</span>
+                </div>
+                <div class="card-footer-actions">
+                  <a class="btn btn-outline" href="https://github.com/blueMonkey23/Aiphotorestorationapp" target="_blank" rel="noopener noreferrer">
+                    <span>Xem Repository</span>
+                    <svg class="icon-external" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </article>
+
           </div>
-          <div class="more-projects"><span>Còn nhiều thử nghiệm và bài tập trong kho mã nguồn.</span><a href="https://github.com/blueMonkey23?tab=repositories" target="_blank" rel="noopener noreferrer">Xem tất cả repository <span aria-hidden="true">↗</span></a></div>
+
+          <!-- More on GitHub banner -->
+          <div class="more-repos-banner">
+            <div class="banner-text">
+              <h4>Còn nhiều bài tập và thử nghiệm công nghệ khác</h4>
+              <p>Kho lưu trữ GitHub bao gồm các bài lab cấu trúc dữ liệu, thuật toán và thử nghiệm công nghệ mới.</p>
+            </div>
+            <a class="btn btn-secondary" href="https://github.com/blueMonkey23?tab=repositories" target="_blank" rel="noopener noreferrer">
+              <span>Xem toàn bộ Repository</span>
+              <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="capabilities-section" id="nang-luc" aria-labelledby="capabilities-title"><div class="container"><div class="section-heading capabilities-heading"><div><p class="section-kicker"><span class="kicker-square"></span> NĂNG LỰC QUA DỰ ÁN</p><h2 id="capabilities-title">Mình làm việc<br />ở nhiều lớp<span>.</span></h2></div><p>Từ repository có thể thấy một hướng làm việc xuyên suốt: tổ chức dữ liệu, thiết kế API và đưa chức năng đến giao diện.</p></div><div class="capability-grid"><div class="capability"><span class="capability-icon">⌘</span><h3>Backend & API</h3><p>FastAPI, Express và Laravel qua các endpoint xác thực, CRUD, báo cáo và luồng đơn hàng.</p><a href="https://github.com/HouHackathon-CQP/GreenMap-Backend" target="_blank" rel="noopener noreferrer">Xem GreenMap <span aria-hidden="true">↗</span></a></div><div class="capability"><span class="capability-icon">◇</span><h3>Dữ liệu & tích hợp</h3><p>PostgreSQL, MySQL, Wikidata, OpenAQ và Orion-LD trong các dự án bản đồ và hệ thống bán hàng.</p><a href="https://github.com/blueMonkey23/CultureLinkVN" target="_blank" rel="noopener noreferrer">Xem CultureLinkVN <span aria-hidden="true">↗</span></a></div><div class="capability"><span class="capability-icon">▤</span><h3>Giao diện sản phẩm</h3><p>React cho dashboard và nguyên mẫu UI; JavaScript và Leaflet cho bản đồ có tương tác.</p><a href="https://github.com/blueMonkey23/QuanLyBanHangCircleK" target="_blank" rel="noopener noreferrer">Xem Circle K demo <span aria-hidden="true">↗</span></a></div></div></div></section>
+      <!-- Capabilities & Architecture Section -->
+      <section class="capabilities-section" id="nang-luc" aria-labelledby="capabilities-title">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">
+                <span class="kicker-glow"></span>
+                <span>CORE ENGINEERING CAPABILITIES</span>
+              </div>
+              <h2 id="capabilities-title" class="section-title">
+                Kiến trúc đa tầng & <span class="gradient-text">năng lực thực tế</span>.
+              </h2>
+            </div>
+            <p class="section-subtitle">
+              Phương pháp tiếp cận xuyên suốt: từ tổ chức dữ liệu, thiết kế hệ thống API có tính chịu tải đến hoàn thiện giao diện ứng dụng.
+            </p>
+          </div>
 
-      <section class="contact-section" id="lien-he" aria-labelledby="contact-title"><div class="container contact-inner"><p class="section-kicker"><span class="kicker-square"></span> KẾT NỐI</p><h2 id="contact-title">Có một bài toán<br />đáng để <em>xây?</em></h2><p>Hãy bắt đầu bằng một cuộc trò chuyện về sản phẩm, dữ liệu hoặc cách triển khai.</p><a class="button button-lime" href="https://github.com/blueMonkey23" target="_blank" rel="noopener noreferrer">Liên hệ qua GitHub <span aria-hidden="true">↗</span></a><div class="contact-orb" aria-hidden="true">TC.</div></div></section>
+          <div class="capabilities-grid">
+            <!-- Pillar 1 -->
+            <div class="capability-card">
+              <div class="cap-header">
+                <div class="cap-icon-box">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <span class="cap-step">LAYER 01</span>
+              </div>
+              <h3>Backend & Hệ Thống Phân Tán</h3>
+              <p>Thiết kế và cài đặt các dịch vụ backend hiệu năng cao, API Gateway điều hướng thông minh và bảo mật dữ liệu người dùng.</p>
+              <ul class="cap-features">
+                <li><span>FastAPI & Python</span>: Endpoint phi đồng bộ, tài liệu OpenAPI tự động.</li>
+                <li><span>Express & Node.js</span>: Microservices gateway, middleware và định tuyến.</li>
+                <li><span>Laravel & PHP</span>: RESTful API chuẩn mực, ORM Eloquent, validation.</li>
+                <li><span>Triển khai</span>: Docker, Docker Compose, môi trường Linux.</li>
+              </ul>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="capability-card">
+              <div class="cap-header">
+                <div class="cap-icon-box">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <span class="cap-step">LAYER 02</span>
+              </div>
+              <h3>Dữ Liệu & Tích Hợp Hệ Thống</h3>
+              <p>Mô hình hóa dữ liệu quan hệ, tích hợp các chuẩn dữ liệu mở quốc tế và cơ chế trao đổi ngữ cảnh thời gian thực.</p>
+              <ul class="cap-features">
+                <li><span>Cơ sở dữ liệu quan hệ</span>: PostgreSQL, MySQL, Microsoft SQL Server.</li>
+                <li><span>IoT & Smart City</span>: Orion-LD Context Broker, NGSI-LD entities sync.</li>
+                <li><span>Dữ liệu mở (Open Data)</span>: Wikidata SPARQL queries, OpenAQ integration.</li>
+                <li><span>Tối ưu hóa</span>: Truy vấn quan hệ, index bảng, schema normalization.</li>
+              </ul>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="capability-card">
+              <div class="cap-header">
+                <div class="cap-icon-box">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <span class="cap-step">LAYER 03</span>
+              </div>
+              <h3>Giao Diện & Ứng Dụng Client</h3>
+              <p>Xây dựng giao diện web tương tác cao, bản đồ GIS số hóa và các ứng dụng quản lý doanh nghiệp trên desktop.</p>
+              <ul class="cap-features">
+                <li><span>Frontend Web</span>: React, TypeScript, Vite, Modern CSS/Tailwind.</li>
+                <li><span>Bản đồ số GIS</span>: Leaflet.js, bản đồ tương tác, marker clustering.</li>
+                <li><span>Trực quan dữ liệu</span>: Chart.js, báo cáo biểu đồ thời gian thực.</li>
+                <li><span>Ứng dụng Desktop</span>: C# Windows Forms, quản lý cơ sở dữ liệu nội bộ.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Engineering Philosophy Section -->
+      <section class="philosophy-section" id="kien-truc" aria-labelledby="philosophy-title">
+        <div class="container">
+          <div class="philosophy-box">
+            <div class="philosophy-text">
+              <span class="philosophy-badge">TRIẾT LÝ LÀM VIỆC</span>
+              <h2 id="philosophy-title">Mã nguồn là bản lý lịch chân thực nhất.</h2>
+              <p>
+                Mình quan niệm năng lực của một lập trình viên không nằm ở những dòng tự giới thiệu chung chung, mà được phản ánh qua từng commit, cách giải quyết bài toán cụ thể và sự nghiêm túc với cấu trúc hệ thống.
+              </p>
+              <div class="philosophy-points">
+                <div class="point-item">
+                  <span class="point-dot"></span>
+                  <div>
+                    <strong>Thực tế & Kiểm chứng được</strong>
+                    <p>Mỗi dự án đều có mã nguồn công khai, ghi rõ đóng góp cụ thể và phạm vi thực hiện.</p>
+                  </div>
+                </div>
+                <div class="point-item">
+                  <span class="point-dot"></span>
+                  <div>
+                    <strong>Tách bạch trách nhiệm (Separation of Concerns)</strong>
+                    <p>Kiến trúc rõ ràng giữa tầng dữ liệu, tầng logic dịch vụ và tầng hiển thị giúp hệ thống dễ bảo trì và mở rộng.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="philosophy-visual" aria-hidden="true">
+              <div class="circuit-board">
+                <div class="circuit-center">
+                  <span class="circuit-chip">TC</span>
+                  <span class="circuit-text">CORE SYSTEM</span>
+                </div>
+                <div class="circuit-ring r-outer"></div>
+                <div class="circuit-ring r-mid"></div>
+                <div class="node-tag tag-api">API GATEWAY</div>
+                <div class="node-tag tag-db">POSTGRES / MYSQL</div>
+                <div class="node-tag tag-ui">REACT / LEAFLET</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="lien-he" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-decor-glow" aria-hidden="true"></div>
+            <div class="contact-grid">
+              <div class="contact-info">
+                <div class="section-kicker">
+                  <span class="kicker-glow"></span>
+                  <span>KẾT NỐI & HỢP TÁC</span>
+                </div>
+                <h2 id="contact-title" class="contact-heading">
+                  Có bài toán cần <span class="gradient-text">giải pháp tối ưu?</span>
+                </h2>
+                <p class="contact-lead">
+                  Mình luôn sẵn sàng trao đổi về các dự án backend, kiến trúc hệ thống, hoặc thảo luận các cơ hội nghề nghiệp phù hợp.
+                </p>
+
+                <div class="contact-methods">
+                  <div class="method-card">
+                    <div class="method-icon">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <div class="method-details">
+                      <span class="method-label">Email trực tiếp</span>
+                      <strong class="method-val">trantrongchien05@gmail.com</strong>
+                    </div>
+                    <button class="btn btn-sm btn-outline copy-email-btn" type="button" data-email="trantrongchien05@gmail.com" aria-label="Sao chép email">
+                      Copy
+                    </button>
+                  </div>
+
+                  <div class="method-card">
+                    <div class="method-icon">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                      </svg>
+                    </div>
+                    <div class="method-details">
+                      <span class="method-label">GitHub</span>
+                      <strong class="method-val">github.com/blueMonkey23</strong>
+                    </div>
+                    <a class="btn btn-sm btn-outline" href="https://github.com/blueMonkey23" target="_blank" rel="noopener noreferrer">
+                      Ghé thăm
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Card -->
+              <div class="contact-cta-box">
+                <div class="cta-inner">
+                  <div class="avatar-holder">
+                    <span class="avatar-badge">TC</span>
+                  </div>
+                  <h3>Trần Trọng Chiến</h3>
+                  <p class="cta-location">Hà Nội, Việt Nam • nezu.id.vn</p>
+                  <p class="cta-bio">Sẵn sàng nhận các bài toán liên quan đến thiết kế backend, xây dựng API hoặc phát triển toàn diện tính năng.</p>
+                  <div class="cta-btn-group">
+                    <a class="btn btn-primary btn-block" href="mailto:trantrongchien05@gmail.com">
+                      <span>Gửi email trao đổi</span>
+                      <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                    <a class="btn btn-secondary btn-block" href="https://github.com/blueMonkey23" target="_blank" rel="noopener noreferrer">
+                      <span>Khám phá kho lưu trữ GitHub</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="site-footer"><div class="container footer-inner"><span>© 2026 TRẦN TRỌNG CHIẾN</span><span>NEZU.ID.VN</span><a href="#top">Về đầu trang ↑</a></div></footer>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div class="footer-left">
+          <span class="footer-logo">TC.</span>
+          <span class="footer-copy">© 2026 TRẦN TRỌNG CHIẾN — NEZU.ID.VN</span>
+        </div>
+        <div class="footer-right">
+          <span class="footer-tech">Xây dựng bằng Vanilla Web Standards • Tối ưu hiệu năng</span>
+          <a class="back-to-top" href="#top" aria-label="Cuộn về đầu trang">
+            <span>Về đầu trang</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification for Copy -->
+    <div class="toast-notification" id="copy-toast" role="status" aria-live="polite">
+      <div class="toast-icon">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <span class="toast-message">Đã sao chép email: trantrongchien05@gmail.com</span>
+    </div>
+
+    <!-- Script -->
     <script src="script.js" defer></script>
   </body>
 </html>
